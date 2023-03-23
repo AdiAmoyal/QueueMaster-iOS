@@ -11,7 +11,10 @@ import SwiftUI
 struct QueueMasterApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                Login()
+            }
+            .navigationViewStyle(StackNavigationViewStyle())
         }
     }
 }
