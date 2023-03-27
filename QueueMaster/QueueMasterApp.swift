@@ -12,7 +12,8 @@ struct QueueMasterApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                Login()
+//                Login()
+                Home()
             }
             .navigationViewStyle(StackNavigationViewStyle())
         }

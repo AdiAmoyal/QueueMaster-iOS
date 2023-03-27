@@ -8,8 +8,27 @@
 import SwiftUI
 
 struct Home: View {
+    
+    @State var selectedTab: Int = 0
+    
     var body: some View {
-        Text("Home Page")
+        TabView(selection: $selectedTab) {
+            Calendar()
+                .tabItem {
+                    Image(systemName: "calendar")
+                    Text("Calendar")
+                }
+                .tag(0)
+            
+            Clients()
+                .tabItem {
+                    Image(systemName: "person.3.fill")
+                    Text("Clients")
+                }
+                .tag(1)
+        }
+        .accentColor(Color.theme.green)
+        
     }
 }
 
