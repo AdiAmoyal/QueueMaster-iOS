@@ -9,7 +9,10 @@ import SwiftUI
 
 struct AddClient: View {
     
+    @EnvironmentObject var coreDataVM: CoreDataViewModel
+    
     @Environment(\.presentationMode) var presentationMode
+    
     @State var fullName: String = ""
     @State var phoneNumber: String = ""
     
@@ -19,30 +22,36 @@ struct AddClient: View {
                 .ignoresSafeArea()
             
             VStack(spacing: 50) {
-                Text("Add Client")
-                    .font(.largeTitle)
-                    .fontWeight(.thin)
-                    .foregroundColor(Color.theme.green)
-                
+                titleSection
                 VStack {
                     CustomTextField(title: "Full name", text: $fullName)
                     CustomTextField(title: "Phone numbe", text: $phoneNumber)
                 }
-                
                 Spacer()
-                
                 saveButton
             }
             .padding()
         }
     }
+}
+
+extension AddClient {
+    
+    private var titleSection: some View {
+        Text("Add Client")
+            .font(.largeTitle)
+            .fontWeight(.thin)
+            .foregroundColor(Color.theme.green)
+    }
     
     private var saveButton: some View {
         Button(action: {
+            // MARK: - Add validation test
             print("Add Client --> Name: \(fullName) ; Phone: \(phoneNumber)")
-            
+            coreDataVM.addClient(name: fullName, phone: phoneNumber)
             fullName = ""
             phoneNumber = ""
+            presentationMode.wrappedValue.dismiss()
         }) {
             HStack(spacing: 10) {
                 Text("Save".uppercased())
@@ -63,10 +72,12 @@ struct AddClient: View {
         }
         .padding(.bottom, 20)
     }
+    
 }
 
 struct AddClient_Previews: PreviewProvider {
     static var previews: some View {
         AddClient()
+            .environmentObject(CoreDataViewModel())
     }
 }

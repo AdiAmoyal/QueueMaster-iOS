@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct Home: View {
-    
+
     @State var selectedTab: Int = 0
     
     var body: some View {
@@ -28,7 +28,6 @@ struct Home: View {
                 .tag(1)
         }
         .accentColor(Color.theme.green)
-        
     }
 }
 

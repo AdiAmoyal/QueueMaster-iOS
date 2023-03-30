@@ -9,18 +9,13 @@ import SwiftUI
 
 struct Clients: View {
     
-    var clients: [Client] = [
-        Client(name: "Adi Amoyal", phone: "0508766667"),
-        Client(name: "Noam Amoyal", phone: "0501234567"),
-        Client(name: "Yuval Mirski", phone: "0506543217"),
-        Client(name: "Maya Kagan", phone: "0541254367")
-    ]
+    @EnvironmentObject var coreDataVM: CoreDataViewModel
     
     @State var searchText: String = ""
     @State var showAddClient: Bool = false
     
-    
     var body: some View {
+        // Change the Navigation View to Costume Header
         NavigationView {
             ZStack {
                 Color.theme.background
@@ -28,7 +23,6 @@ struct Clients: View {
                 
                 VStack {
                     SearchBar(searchText: $searchText)
-                    
                     clientsList
                 }
             }
@@ -44,9 +38,10 @@ struct Clients: View {
     
     private var clientsList: some View {
         List {
-            ForEach(clients) { client in
-                ClientRow(name: client.name)
+            ForEach(coreDataVM.clients) { client in
+                ClientRow(name: client.name ?? "No Name")
             }
+            .onDelete(perform: coreDataVM.deleteClient)
         }
         .listStyle(PlainListStyle())
     }
@@ -55,5 +50,6 @@ struct Clients: View {
 struct Clients_Previews: PreviewProvider {
     static var previews: some View {
         Clients()
+            .environmentObject(CoreDataViewModel())
     }
 }

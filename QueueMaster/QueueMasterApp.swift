@@ -9,13 +9,17 @@ import SwiftUI
 
 @main
 struct QueueMasterApp: App {
+    
+    @StateObject var coreDataVM = CoreDataViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            NavigationView {
+//            NavigationView {
 //                Login()
-                Home()
-            }
-            .navigationViewStyle(StackNavigationViewStyle())
+            Home()
+                .environmentObject(coreDataVM)
+//            }
+//            .navigationViewStyle(StackNavigationViewStyle())
         }
     }
 }

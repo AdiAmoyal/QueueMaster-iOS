@@ -8,8 +8,15 @@
 import SwiftUI
 
 struct Calendar: View {
+    
+    @EnvironmentObject var coreDataVM: CoreDataViewModel
+    
     var body: some View {
-        Text("Calendar Page")
+        VStack {
+            Button(action: coreDataVM.addQueue) {
+                Text("Add Queue")
+            }
+        }
     }
 }
 
