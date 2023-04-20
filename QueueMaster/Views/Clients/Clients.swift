@@ -13,6 +13,8 @@ struct Clients: View {
     
     @State var searchText: String = ""
     @State var showAddClient: Bool = false
+    @State var showDetailView: Bool = false
+    @State var selectedClient: Client? = nil
     
     var body: some View {
         // Change the Navigation View to Costume Header
@@ -33,6 +35,13 @@ struct Clients: View {
                 Image(systemName: "plus")
             }))
             .sheet(isPresented: $showAddClient, content: { AddClient() })
+            .background(
+                NavigationLink(
+                    destination: ClientDetails(client: $selectedClient),
+                    isActive: $showDetailView,
+                    label: { EmptyView() }
+                )
+            )
         }
     }
     
@@ -40,10 +49,18 @@ struct Clients: View {
         List {
             ForEach(coreDataVM.clients) { client in
                 ClientRow(name: client.name ?? "No Name")
+                    .onTapGesture {
+                        segue(client: client)
+                    }
             }
             .onDelete(perform: coreDataVM.deleteClient)
         }
         .listStyle(PlainListStyle())
+    }
+    
+    private func segue(client: Client) {
+        showDetailView = true
+        selectedClient = client
     }
 }
 

@@ -57,6 +57,9 @@ class CoreDataViewModel: ObservableObject {
     func fetchClients() {
         let request = NSFetchRequest<Client>(entityName: "Client")
         
+        let sort = NSSortDescriptor(keyPath: \Client.name, ascending: true)
+        request.sortDescriptors = [sort]
+        
         do {
             clients = try manager.context.fetch(request)
         } catch {
