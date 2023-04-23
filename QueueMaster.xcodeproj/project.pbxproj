@@ -21,6 +21,7 @@
 		918FCD7329F5591500906875 /* QueueCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918FCD7229F5591500906875 /* QueueCategory.swift */; };
 		918FCD7529F55D9100906875 /* QueueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918FCD7429F55D9100906875 /* QueueView.swift */; };
 		918FCD7729F560F700906875 /* AddQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918FCD7629F560F700906875 /* AddQueue.swift */; };
+		918FCD7929F57F7300906875 /* ClientsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918FCD7829F57F7300906875 /* ClientsList.swift */; };
 		9193E9CC29D5C3DD002441AC /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9193E9CA29D5C3DD002441AC /* DataModel.xcdatamodeld */; };
 		9193E9CE29D5C702002441AC /* CoreDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9193E9CD29D5C702002441AC /* CoreDataViewModel.swift */; };
 		91D2200529CCD04000677CF6 /* QueueMasterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D2200429CCD04000677CF6 /* QueueMasterApp.swift */; };
@@ -50,6 +51,7 @@
 		918FCD7229F5591500906875 /* QueueCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueCategory.swift; sourceTree = "<group>"; };
 		918FCD7429F55D9100906875 /* QueueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueView.swift; sourceTree = "<group>"; };
 		918FCD7629F560F700906875 /* AddQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQueue.swift; sourceTree = "<group>"; };
+		918FCD7829F57F7300906875 /* ClientsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientsList.swift; sourceTree = "<group>"; };
 		9193E9CB29D5C3DD002441AC /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		9193E9CD29D5C702002441AC /* CoreDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataViewModel.swift; sourceTree = "<group>"; };
 		91D2200129CCD04000677CF6 /* QueueMaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QueueMaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,6 +95,7 @@
 				914E13B829D1CF69000AC89F /* ClientRow.swift */,
 				914E13BE29D23007000AC89F /* AddClient.swift */,
 				918FCD6329F12FDD00906875 /* ClientDetails.swift */,
+				918FCD7829F57F7300906875 /* ClientsList.swift */,
 			);
 			path = Clients;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				918FCD6429F12FDD00906875 /* ClientDetails.swift in Sources */,
 				91D2202829CCDD0B00677CF6 /* Color.swift in Sources */,
 				918FCD6F29F552B300906875 /* TimelineViewRow.swift in Sources */,
+				918FCD7929F57F7300906875 /* ClientsList.swift in Sources */,
 				91D2201329CCD08800677CF6 /* Login.swift in Sources */,
 				918FCD7129F5578E00906875 /* QueueModel.swift in Sources */,
 				91D2202B29CCEE3D00677CF6 /* CustomTextField.swift in Sources */,

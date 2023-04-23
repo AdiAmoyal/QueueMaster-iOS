@@ -102,10 +102,11 @@ class CoreDataViewModel: ObservableObject {
         
     }
     
-    func addQueue() {
+    func addQueue(client: Client, date: Date, description: String, category: Category) {
         let newQueue = Queue(context: manager.context)
-//        newQueue.time = Date()
-//        newQueue.client = clients[0]
+        newQueue.client = client
+        newQueue.dateAdded = date
+        newQueue.des = description
         
         saveData()
     }
