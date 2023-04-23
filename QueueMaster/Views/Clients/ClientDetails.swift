@@ -85,7 +85,7 @@ extension DetailView {
                 .padding(.bottom, 3)
             
             ScrollView {
-                Text("")
+                Text(client.notes ?? "")
                     .fontWeight(.medium)
                     .foregroundColor(Color.theme.accent)
             }

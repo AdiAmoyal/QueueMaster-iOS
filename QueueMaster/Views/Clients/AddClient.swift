@@ -15,71 +15,69 @@ struct AddClient: View {
     
     @State var fullName: String = ""
     @State var phoneNumber: String = ""
+    @State var notes: String = ""
     
     var body: some View {
-        ZStack {
-            Color.theme.background
-                .ignoresSafeArea()
-            
-            VStack(spacing: 50) {
-                titleSection
+        NavigationView {
+            ZStack {
+                Color.theme.background
+                    .ignoresSafeArea()
+                
                 VStack {
-                    CustomTextField(title: "Full name", text: $fullName)
-                    CustomTextField(title: "Phone numbe", text: $phoneNumber)
+                    VStack {
+                        CustomTextField(title: "Full name", text: $fullName)
+                        CustomTextField(title: "Phone numbe", text: $phoneNumber)
+                        CustomTextField(title: "Notes", text: $notes)
+                    }
+                    .padding(.top, 30)
+                    Spacer()
                 }
-                Spacer()
-                saveButton
+                .padding()
             }
-            .padding()
+            .navigationTitle("New Client")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    cancelButton
+                }
+                
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    saveButton
+                }
+            }
         }
+        
     }
 }
 
 extension AddClient {
-    
-    private var titleSection: some View {
-        Text("Add Client")
-            .font(.largeTitle)
-            .fontWeight(.thin)
-            .foregroundColor(Color.theme.green)
-    }
-    
     private var saveButton: some View {
         Button(action: {
             // MARK: - Add validation test
-            print("Add Client --> Name: \(fullName) ; Phone: \(phoneNumber)")
-            coreDataVM.addClient(name: fullName, phone: phoneNumber)
+            coreDataVM.addClient(name: fullName, phone: phoneNumber, notes: notes)
             fullName = ""
             phoneNumber = ""
+            notes = ""
             presentationMode.wrappedValue.dismiss()
         }) {
-            HStack(spacing: 10) {
-                Text("Save".uppercased())
-                Image(systemName: "tray.and.arrow.down")
-            }
-            .foregroundColor(Color.theme.secondaryText)
-            .font(.title2)
-            .fontWeight(.semibold)
-            .padding(.horizontal)
-            .padding(.vertical, 10)
-            .frame(maxWidth: .infinity)
-            .background(
-                RoundedRectangle(cornerRadius: 20)
-                    .foregroundColor(Color.theme.green)
-                    .shadow(color: Color.theme.accent.opacity(0.8), radius: 4, x: 0, y: 3)
-            )
-            
+            Image(systemName: "tray.and.arrow.down")
+                .foregroundColor(Color.theme.green)
         }
-        .padding(.bottom, 20)
     }
     
-    // MARK: Add Close Btn
-    
+    private var cancelButton: some View {
+        Button(action: { presentationMode.wrappedValue.dismiss() }) {
+            Image(systemName: "xmark")
+                .foregroundColor(Color.theme.green)
+        }
+    }
 }
 
 struct AddClient_Previews: PreviewProvider {
     static var previews: some View {
-        AddClient()
-            .environmentObject(CoreDataViewModel())
+        NavigationView {
+            AddClient()
+                .environmentObject(CoreDataViewModel())
+        }
     }
 }

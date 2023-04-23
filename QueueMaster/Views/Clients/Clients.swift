@@ -17,7 +17,6 @@ struct Clients: View {
     @State var selectedClient: Client? = nil
     
     var body: some View {
-        // Change the Navigation View to Costume Header
         NavigationView {
             ZStack {
                 Color.theme.background
@@ -66,7 +65,10 @@ struct Clients: View {
 
 struct Clients_Previews: PreviewProvider {
     static var previews: some View {
-        Clients()
-            .environmentObject(CoreDataViewModel())
+        NavigationView {
+            Clients()
+                .environmentObject(CoreDataViewModel())
+        }
+        
     }
 }

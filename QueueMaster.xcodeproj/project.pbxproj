@@ -7,12 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		914E13B429D1CB67000AC89F /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914E13B329D1CB67000AC89F /* Calendar.swift */; };
+		914E13B429D1CB67000AC89F /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914E13B329D1CB67000AC89F /* CalendarView.swift */; };
 		914E13B929D1CF69000AC89F /* ClientRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914E13B829D1CF69000AC89F /* ClientRow.swift */; };
 		914E13BB29D1D0C0000AC89F /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914E13BA29D1D0C0000AC89F /* SearchBar.swift */; };
 		914E13BD29D1D156000AC89F /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914E13BC29D1D156000AC89F /* UIApplication.swift */; };
 		914E13BF29D23007000AC89F /* AddClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914E13BE29D23007000AC89F /* AddClient.swift */; };
 		918FCD6429F12FDD00906875 /* ClientDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918FCD6329F12FDD00906875 /* ClientDetails.swift */; };
+		918FCD6829F550C200906875 /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918FCD6729F550C200906875 /* Calendar.swift */; };
+		918FCD6A29F550E200906875 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918FCD6929F550E200906875 /* Date.swift */; };
+		918FCD6D29F5512E00906875 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918FCD6C29F5512E00906875 /* Header.swift */; };
+		918FCD6F29F552B300906875 /* TimelineViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918FCD6E29F552B300906875 /* TimelineViewRow.swift */; };
+		918FCD7129F5578E00906875 /* QueueModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918FCD7029F5578E00906875 /* QueueModel.swift */; };
+		918FCD7329F5591500906875 /* QueueCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918FCD7229F5591500906875 /* QueueCategory.swift */; };
+		918FCD7529F55D9100906875 /* QueueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918FCD7429F55D9100906875 /* QueueView.swift */; };
+		918FCD7729F560F700906875 /* AddQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918FCD7629F560F700906875 /* AddQueue.swift */; };
 		9193E9CC29D5C3DD002441AC /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9193E9CA29D5C3DD002441AC /* DataModel.xcdatamodeld */; };
 		9193E9CE29D5C702002441AC /* CoreDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9193E9CD29D5C702002441AC /* CoreDataViewModel.swift */; };
 		91D2200529CCD04000677CF6 /* QueueMasterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D2200429CCD04000677CF6 /* QueueMasterApp.swift */; };
@@ -28,12 +36,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		914E13B329D1CB67000AC89F /* Calendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
+		914E13B329D1CB67000AC89F /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		914E13B829D1CF69000AC89F /* ClientRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientRow.swift; sourceTree = "<group>"; };
 		914E13BA29D1D0C0000AC89F /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		914E13BC29D1D156000AC89F /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 		914E13BE29D23007000AC89F /* AddClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddClient.swift; sourceTree = "<group>"; };
 		918FCD6329F12FDD00906875 /* ClientDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientDetails.swift; sourceTree = "<group>"; };
+		918FCD6729F550C200906875 /* Calendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
+		918FCD6929F550E200906875 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		918FCD6C29F5512E00906875 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		918FCD6E29F552B300906875 /* TimelineViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineViewRow.swift; sourceTree = "<group>"; };
+		918FCD7029F5578E00906875 /* QueueModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueModel.swift; sourceTree = "<group>"; };
+		918FCD7229F5591500906875 /* QueueCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueCategory.swift; sourceTree = "<group>"; };
+		918FCD7429F55D9100906875 /* QueueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueView.swift; sourceTree = "<group>"; };
+		918FCD7629F560F700906875 /* AddQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQueue.swift; sourceTree = "<group>"; };
 		9193E9CB29D5C3DD002441AC /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		9193E9CD29D5C702002441AC /* CoreDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataViewModel.swift; sourceTree = "<group>"; };
 		91D2200129CCD04000677CF6 /* QueueMaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QueueMaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,6 +79,9 @@
 		914E13B529D1CE65000AC89F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				9193E9CA29D5C3DD002441AC /* DataModel.xcdatamodeld */,
+				918FCD7029F5578E00906875 /* QueueModel.swift */,
+				918FCD7229F5591500906875 /* QueueCategory.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -76,6 +95,18 @@
 				918FCD6329F12FDD00906875 /* ClientDetails.swift */,
 			);
 			path = Clients;
+			sourceTree = "<group>";
+		};
+		918FCD6B29F5511400906875 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				918FCD6C29F5512E00906875 /* Header.swift */,
+				914E13B329D1CB67000AC89F /* CalendarView.swift */,
+				918FCD6E29F552B300906875 /* TimelineViewRow.swift */,
+				918FCD7429F55D9100906875 /* QueueView.swift */,
+				918FCD7629F560F700906875 /* AddQueue.swift */,
+			);
+			path = Calendar;
 			sourceTree = "<group>";
 		};
 		9193E9A529D5AF7E002441AC /* ViewModels */ = {
@@ -112,7 +143,6 @@
 				91D2200429CCD04000677CF6 /* QueueMasterApp.swift */,
 				91D2200829CCD04200677CF6 /* Assets.xcassets */,
 				91D2200A29CCD04200677CF6 /* Preview Content */,
-				9193E9CA29D5C3DD002441AC /* DataModel.xcdatamodeld */,
 			);
 			path = QueueMaster;
 			sourceTree = "<group>";
@@ -128,12 +158,12 @@
 		91D2202529CCD14D00677CF6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				918FCD6B29F5511400906875 /* Calendar */,
 				914E13C029D235E0000AC89F /* Clients */,
 				91D2202929CCEE2400677CF6 /* Components */,
 				91D2201229CCD08800677CF6 /* Login.swift */,
 				91D2201629CCD0AA00677CF6 /* Signup.swift */,
 				91D2201829CCD0B500677CF6 /* Home.swift */,
-				914E13B329D1CB67000AC89F /* Calendar.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -143,6 +173,8 @@
 			children = (
 				91D2202729CCDD0B00677CF6 /* Color.swift */,
 				914E13BC29D1D156000AC89F /* UIApplication.swift */,
+				918FCD6729F550C200906875 /* Calendar.swift */,
+				918FCD6929F550E200906875 /* Date.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -227,20 +259,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				918FCD6D29F5512E00906875 /* Header.swift in Sources */,
 				914E13BD29D1D156000AC89F /* UIApplication.swift in Sources */,
 				91D2200529CCD04000677CF6 /* QueueMasterApp.swift in Sources */,
-				914E13B429D1CB67000AC89F /* Calendar.swift in Sources */,
+				914E13B429D1CB67000AC89F /* CalendarView.swift in Sources */,
 				918FCD6429F12FDD00906875 /* ClientDetails.swift in Sources */,
 				91D2202829CCDD0B00677CF6 /* Color.swift in Sources */,
+				918FCD6F29F552B300906875 /* TimelineViewRow.swift in Sources */,
 				91D2201329CCD08800677CF6 /* Login.swift in Sources */,
+				918FCD7129F5578E00906875 /* QueueModel.swift in Sources */,
 				91D2202B29CCEE3D00677CF6 /* CustomTextField.swift in Sources */,
+				918FCD6A29F550E200906875 /* Date.swift in Sources */,
 				914E13BB29D1D0C0000AC89F /* SearchBar.swift in Sources */,
 				91D2201929CCD0B500677CF6 /* Home.swift in Sources */,
 				914E13BF29D23007000AC89F /* AddClient.swift in Sources */,
 				9193E9CC29D5C3DD002441AC /* DataModel.xcdatamodeld in Sources */,
+				918FCD7729F560F700906875 /* AddQueue.swift in Sources */,
 				9193E9CE29D5C702002441AC /* CoreDataViewModel.swift in Sources */,
 				91D2202D29CCF35400677CF6 /* LoginBtn.swift in Sources */,
 				91D2201B29CCD0C400677CF6 /* Clients.swift in Sources */,
+				918FCD7529F55D9100906875 /* QueueView.swift in Sources */,
+				918FCD6829F550C200906875 /* Calendar.swift in Sources */,
+				918FCD7329F5591500906875 /* QueueCategory.swift in Sources */,
 				914E13B929D1CF69000AC89F /* ClientRow.swift in Sources */,
 				91D2201729CCD0AA00677CF6 /* Signup.swift in Sources */,
 			);

@@ -12,12 +12,20 @@ struct QueueMasterApp: App {
     
     @StateObject var coreDataVM = CoreDataViewModel()
     
+    init() {
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor(Color.theme.green)]
+        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor(Color.theme.green)]
+    }
+    
     var body: some Scene {
         WindowGroup {
+            NavigationView {
+                Home()
+                    .environmentObject(coreDataVM)
+            }
 //            NavigationView {
 //                Login()
-            Home()
-                .environmentObject(coreDataVM)
+            
 //            }
 //            .navigationViewStyle(StackNavigationViewStyle())
         }

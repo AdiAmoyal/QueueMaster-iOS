@@ -68,10 +68,11 @@ class CoreDataViewModel: ObservableObject {
         
     }
     
-    func addClient(name: String, phone: String) {
+    func addClient(name: String, phone: String, notes: String) {
         let newClient = Client(context: manager.context)
         newClient.name = name
         newClient.phone = phone
+        newClient.notes = notes
         saveData()
     }
     
