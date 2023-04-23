@@ -23,15 +23,8 @@ struct AddQueue: View {
         VStack(alignment: .leading) {
             VStack(alignment: .leading, spacing: 10) {
                 HStack {
-                    Button(action: { presentationMode.wrappedValue.dismiss()
-                    }) {
-                        Image(systemName: "chevron.left")
-                            .foregroundColor(.white)
-                            .contentShape(Rectangle())
-                    }
-                    
+                    backButton
                     Spacer()
-                    
                     saveButton
                 }
                 
@@ -50,27 +43,13 @@ struct AddQueue: View {
             }
             
             VStack(alignment: .leading, spacing: 20) {
-                
                 clientSection
-                
-                Rectangle()
-                    .fill(Color.theme.accent.opacity(0.5))
-                    .frame(height: 1)
-                
+                customDivider
                 dateSection
-                
-                Rectangle()
-                    .fill(Color.theme.accent.opacity(0.5))
-                    .frame(height: 1)
-                
+                customDivider
                 descriptionSection
-                
-                Rectangle()
-                    .fill(Color.theme.accent.opacity(0.5))
-                    .frame(height: 1)
-                
+                customDivider
                 categorySection
-                
             }
             .padding(15)
         }
@@ -88,6 +67,7 @@ extension AddQueue {
                 .contentShape(Rectangle())
         }
     }
+    
     private var saveButton: some View {
         Button(action: {
             // MARK: - Add validation
@@ -104,6 +84,12 @@ extension AddQueue {
                 .foregroundColor(.white)
                 .contentShape(Rectangle())
         }
+    }
+    
+    private var customDivider: some View {
+        Rectangle()
+            .fill(Color.theme.accent.opacity(0.5))
+            .frame(height: 1)
     }
     
     private var clientSection: some View {
@@ -215,6 +201,8 @@ extension AddQueue {
         }
     }
 }
+
+
 
 struct AddQueue_Previews: PreviewProvider {
     static var previews: some View {
